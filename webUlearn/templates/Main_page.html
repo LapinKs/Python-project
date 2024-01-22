@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Специалист тех-поддержки</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="navigation">
+            <nav class="nav-list-container">
+                <ul>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link current" href="/">Главная</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'relevance' %}>Востребованность</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'geography' %}>География</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'skills' %}>Навыки</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'lastVacancy' %}>Последние вакансии</a>
+                    </li>
+                </ul>
+            </nav>
+            <footer>
+                <p>Лапин Константин Юрьевич</p>
+                <p>АТ-01</p>
+            </footer>
+        </div>
+        <div class="content">
+            <header class="main-header">
+                <div class="logo-container">
+                    <img src="{% static 'images/.png' %}" class="logo"/>
+                </div>
+            </header>
+            <div class="data-container">
+                {% for context in context %}
+                <img class="content-image" src="{{ context.photo.url }}"/>
+                {{ context.content|safe }}
+
+                <div class="empty"></div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

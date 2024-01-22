@@ -1,6 +1,4 @@
 from django.shortcuts import render
-import re
-from datetime import datetime
 
 def main_page(request):
     return render(request,'Main_page.html')
@@ -12,7 +10,7 @@ def last_vacancies_page(request):
     return render(request,'Last_vacancies.html')
 
 def revelance_page(request):
-    return render(request,'Revelance.html')
+    return render(request,'Relevance.html')
 
 def skillset_page(request):
-    return render(request,'Skillset.html')
+    return render(request,'ulearn_lapin/Skillset.html')
