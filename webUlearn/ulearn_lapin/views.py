@@ -1,4 +1,6 @@
 from django.shortcuts import render
+import re
+from datetime import datetime
 
 def main_page(request):
     return render(request,'Main_page.html')
