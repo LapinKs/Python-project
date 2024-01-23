@@ -1,10 +1,71 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Специалист техподдержки</title>
+    <link rel="stylesheet" href=" {% static "css/skillsPage.css" %}">
 </head>
 <body>
+<main>
+    <header>
+        <div class = 'header-div'>
+            <h1>Специалист техподдержки</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="navigation">
+            <nav class="nav-list-container">
+                <ul>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href="/">Главная</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'relevance' %}>Востребованность</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'geography' %}>География</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link selected" href={% url 'skills' %}>Навыки</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'lastVacancy' %}>Последние вакансии</a>
+                    </li>
+                </ul>
+            </nav></div>
+            <div class="content">
+            <header class="main-header">
+                <div class="logo-container">
+                    <img src="{% static 'images/tech-sup.png' %}"  class="logo"/>
+                </div>
+            </header>
+            <div class="data-container">
+                {% for data in context %}
+                <h1 class="title">{{ data.table_name }}</h1>
+                <div class="tables_skills">
+                    {{ data.table|safe }}
+                </div>
+                <div class="graph-container">
+                    <img class="skills_graph" src={{ data.graph_skills.url }} alt=""/>
+                </div>
+                <div class="empty_skills"></div>
+                {% endfor %}
+            </div>
+        </div>
+            </div>
+            <footer>
+                <p>Лапин Константин Юрьевич</p>
+                <p>АТ-01</p>
+            </footer>
 
+
+
+</main>
 </body>
+<style>
+
+
+</style>
 </html>

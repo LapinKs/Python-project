@@ -1,0 +1,166 @@
+body {
+    font-family:RobotoMono;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+width:100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Nav */
+.navigation {
+    background: #aaa583;
+    color: rgb(200, 231, 200);
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.nav-list-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    background: #9c9c9c;
+}
+
+.nav-list-element {
+    display: block;
+}
+
+.nav-list-link {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: inherit;
+    height: 100px;
+    width: 300px;
+    padding-left: 15px;
+    align-items: center;
+}
+
+.selected {
+    border: #fff 2px solid;
+}
+
+.nav-list-link:hover {
+    border: #fff 1px solid;
+}
+
+.selected:hover {
+    border: #fff 2px solid;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Content */
+.content {
+    display: flex;
+    flex-direction: column;
+    background: #b8d9be;
+    font-size: 18px;
+    padding: 30px;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.logo-container {
+justify-content:center;
+    padding: 10px;
+}
+
+.logo {
+
+    width: 90px;
+    height: 90px;
+}
+
+.data-container {
+    padding: 0 30px;
+}
+
+.graph-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.skills_graph {
+margin-top:40px;
+    width: 800px;
+}
+
+.tables {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dataframe {
+    border: 1px solid #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th.title {
+    background-color: #aaa583;
+    color: black;
+}
+
+.title {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+table {
+    border: none;
+}
+
+th {
+    background-color: #aaa583;
+    color: rgb(200, 231, 200);
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #ddd;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+footer{
+justify-content:center;
+}
+.header-div{
+background-color:white;
+justify-content:center;
+}
+.header{background-color:#aaa583}

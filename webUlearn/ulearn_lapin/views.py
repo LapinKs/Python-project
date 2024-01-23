@@ -1,16 +1,18 @@
 from django.shortcuts import render
-
+from .utils import *
+from .api import HH_Api
 def main_page(request):
-    return render(request,'Main_page.html')
+    return render(request,'Main_page.html',{'context':get_main_page()})
 
 def geography_page(request):
-    return render(request,'Geography.html')
+    return render(request,'Geography.html',{'context':get_geography_page()})
 
 def last_vacancies_page(request):
-    return render(request,'Last_vacancies.html')
+    vacancies = HH_Api('Специалист техподдержки').get_data_vacancies('2024-01-23', 10)
+    return render(request,'Last_vacancies.html',{'context':vacancies})
 
 def revelance_page(request):
-    return render(request,'Relevance.html')
+    return render(request,'Relevance.html',{'context':get_relevance_page()})
 
 def skillset_page(request):
-    return render(request,'ulearn_lapin/Skillset.html')
+    return render(request,'Skillset.html',{'context':get_skillset_page})

@@ -5,10 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Специалист тех-поддержки</title>
-    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    <link rel="stylesheet" href="{% static 'css/mainPage.css' %}" >
 </head>
 <body>
 <main>
+    <header>
+        <div class = 'header-div'>
+            <h1>Специалист техподдержки</h1>
+        </div>
+    </header>
     <div class="container">
         <div class="navigation">
             <nav class="nav-list-container">
@@ -30,15 +35,11 @@
                     </li>
                 </ul>
             </nav>
-            <footer>
-                <p>Лапин Константин Юрьевич</p>
-                <p>АТ-01</p>
-            </footer>
         </div>
         <div class="content">
             <header class="main-header">
                 <div class="logo-container">
-                    <img src="{% static 'images/.png' %}" class="logo"/>
+                    <img src="{% static 'images/tech-sup.png' %}" width ='90' height = '90' class="logo"/>
                 </div>
             </header>
             <div class="data-container">
@@ -51,6 +52,10 @@
             </div>
         </div>
     </div>
+            <footer>
+                <p>Лапин Константин Юрьевич</p>
+                <p>АТ-01</p>
+            </footer>
 </main>
 </body>
 </html>
