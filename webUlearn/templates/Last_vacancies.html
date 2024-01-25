@@ -1,10 +1,75 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Последние вакансии</title>
+    <link rel="stylesheet" href="{% static 'css/vacancyPage.css' %}">
 </head>
 <body>
+<main>
+<header class="main-header">
+                <div class="logo-container">
+                    <img src="{% static 'images/tech-logo.png' %}" width ="400" height="120" class="logo"/>
+                </div>
+    </header>
+    <div class="container">
+        <div class="navigation">
+            <nav class="nav-list-container">
+                <ul>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href="/">Главная</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'relevance' %}>Востребованность</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'geography' %}>География</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'skills' %}>Навыки</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link selected" href={% url 'lastVacancy' %}>Последние вакансии</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
 
+            <div class="data-container">
+                <table>
+                    <tr>
+                        <th>Название</th>
+                        <th>Описание</th>
+                        <th>Навыки</th>
+                        <th>Компания</th>
+                        <th>Зарплата</th>
+                        <th>Город</th>
+                        <th>Дата публикации</th>
+                        <th>Ссылка</th>
+                    </tr>
+                    {% for i in context %}
+                    <tr>
+                        <td>{{ i.name }}</td>
+                        <td>{{ i.description }}</td>
+                        <td>{{ i.key_skills }}</td>
+                        <td>{{ i.employer }}</td>
+                        <td>{{ i.salary }}</td>
+                        <td>{{ i.area }}</td>
+                        <td>{{ i.published_at }}</td>
+                        <td>{{ i.alternate_url }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+       <h2 class="footer-text">Лапин Константин Юрьевич</h2>
+        <h3 class="footer-text">АТ-01</h3>
+    </footer>
+</main>
 </body>
 </html>

@@ -26,7 +26,6 @@ currency_to_rub = {
 filename = 'vacancies.csv'
 
 def make_skills(file_name, vacancy):
-    output_folder = vacancy[0]
 
     df = pd.read_csv(file_name, low_memory=False)
     df = df.dropna(subset='key_skills')
@@ -172,7 +171,7 @@ def make_geography_demand(file_name, keywords):
     plt.rcParams.update({'font.size': 8})
     plt.rc('legend', fontsize=8)
     ax = sal_year.join(sal_year_job).plot.bar(title='Уровень зарплат по годам')
-    ax.figure.savefig(os.path.join(output_folder, 'revelance1.png'), dpi=300)
+    ax.figure.savefig(os.path.join(r'C:\Users\kosty\PycharmProjects\web\webUlearn\static\images', 'revelance1.png'), dpi=300)
 
     fig, axes = plt.subplots(nrows=2)
     sal_count.join(sal_count_job).plot.bar(title='Количество вакансий по годам', ax=axes[0])
@@ -181,7 +180,7 @@ def make_geography_demand(file_name, keywords):
     axes[1].grid(axis='y')
 
     plt.tight_layout()
-    fig.savefig(os.path.join(output_folder, 'revelance2.png'), dpi=300)
+    fig.savefig(os.path.join(r'C:\Users\kosty\PycharmProjects\web\webUlearn\static\images', 'revelance2.png'), dpi=300)
     plt.show()
     fig, ax1 = plt.subplots()
     ax1.barh(sal_city_to_plot['Город'][::-1], sal_city_to_plot['Уровень зарплат'][::-1], color='#FF5733')

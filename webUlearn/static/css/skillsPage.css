@@ -2,7 +2,7 @@ body {
     font-family:RobotoMono;
     padding: 0;
     margin: 0;
-    color: black;
+     background-color: #7851A9;
 }
 
 ul {
@@ -18,9 +18,9 @@ width:100%;
 
 /* Nav */
 .navigation {
-    background: #aaa583;
-    color: rgb(200, 231, 200);
-    font-size: 22px;
+    background:  #660099;
+    color: black;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,7 +31,7 @@ width:100%;
     display: flex;
     flex-direction: column;
     margin-bottom: auto;
-    background: #9c9c9c;
+    background: #8F509D;
 }
 
 .nav-list-element {
@@ -44,7 +44,7 @@ width:100%;
     text-decoration: none;
     color: inherit;
     height: 100px;
-    width: 300px;
+    width: 170px;
     padding-left: 15px;
     align-items: center;
 }
@@ -60,38 +60,40 @@ width:100%;
 .selected:hover {
     border: #fff 2px solid;
 }
-
+nav a:hover, nav a:active {
+    background-color: #C364C5;
+}
 footer {
     text-align: center;
+    background-color: #8c99a4;
 }
-
 /* Content */
 .content {
     display: flex;
     flex-direction: column;
-    background: #b8d9be;
-    font-size: 18px;
-    padding: 30px;
+    background: #9966CC;
+    font-size: 12px;
+    padding: 0px;
 }
 
 .main-header {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-begin;
 }
 
 .logo-container {
-justify-content:center;
+margin-left: auto
+ margin-right: auto
     padding: 10px;
 }
 
 .logo {
-
-    width: 90px;
-    height: 90px;
+    height: 120px;
 }
 
 .data-container {
+
     padding: 0 30px;
 }
 
@@ -103,7 +105,7 @@ justify-content:center;
 
 .skills_graph {
 margin-top:40px;
-    width: 800px;
+    width: 600px;
 }
 
 .tables {
@@ -123,7 +125,7 @@ th, td {
 }
 
 th.title {
-    background-color: #aaa583;
+    background-color: #9966CC;
     color: black;
 }
 
@@ -139,12 +141,13 @@ h1 {
 }
 
 table {
+
     border: none;
 }
 
 th {
-    background-color: #aaa583;
-    color: rgb(200, 231, 200);
+    background-color: #9966CC;
+    color: black;
     padding-left: 5px;
     padding-right: 5px;
     border: 1px solid #ddd;
@@ -159,8 +162,22 @@ td {
 footer{
 justify-content:center;
 }
-.header-div{
-background-color:white;
-justify-content:center;
-}
+
 .header{background-color:#aaa583}
+footer{
+ background-color: #7851A9;}
+
+ .logo-container {
+margin-left: auto
+ margin-right: auto
+    padding: 10px;
+}
+ header{justify-content:center;
+ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+ padding:20px;
+ }
+ .tables-skills{
+   overflow: auto;
+   height:100px;
+   display:block;
+}

@@ -14,7 +14,8 @@ ul {
     display: flex;
     flex-direction: row;
 }
-
+footer{
+ background-color: #7851A9;}
 /* Nav */
 .navigation {
     background:  #660099;
@@ -66,14 +67,14 @@ footer {
     text-align: center;
     background-color: #8c99a4;
 }
-
 /* Content */
 .content {
     display: flex;
     flex-direction: column;
     background: #9966CC;
-    font-size: 18px;
-    padding: 10px;
+    font-size: 16px;
+    padding:40px;
+    width: 100%;
 }
 
 .main-header {
@@ -82,29 +83,74 @@ footer {
     justify-content: flex-begin;
 }
 
+h1.title {
+    display: flex;
+    align-items: center;
+}
 
+.logo-container {
+margin-left: auto;
+ margin-right: auto;
+    padding: 10px;
+}
+
+.logo {margin-left: 400px;
+ margin-right: auto;
+    height: 120px;
+}
 
 .data-container {
+display: flex;
+    flex-direction: row;
     padding: 0 50px;
 }
 
-.content-image {
-    height: 223px;
+.graphs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-p {
-    padding: 0;
-    margin: 0 0 4px;
+.geography-graph-1, .geography-graph-2 {
+
+    height: 350px;
+}
+
+table{
+font-size:20px;}
+.tables {
+justify-content: space-around;
+gap:10px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 5%;
+}
+
+.dataframe {
+    border: 1px solid #fff;
+}
+
+th, td {
+background-color: #9966CC;
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+}
+
+th.title {
+    background-color: #9966CC;
+    color: black;
 }
 .logo-container {
+margin-left: auto
+ margin-right: auto
     padding: 10px;
 }
-.logo {
-    height: 120px;
-}
-footer{
- background-color: #7851A9;}
  header{justify-content:center;
  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
  padding:20px;
+ }
+.footer-div{
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
  }

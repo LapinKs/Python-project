@@ -2,12 +2,61 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Title</title>
-
+    <title>География</title>
+    <link rel="stylesheet" href="{% static 'css/vacancyPage.css' %}">
 </head>
 <body>
+<main>
+<header class="main-header">
+                <div class="logo-container">
+                    <img src="{% static 'images/tech-logo.png' %}"  width ="400" height="120" class="logo"/>
+                </div>
+    </header>
+    <div class="container">
+        <div class="navigation">
+            <nav class="nav-list-container">
+                <ul>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href="/">Главная</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'relevance' %}>Востребованность</a>
+                    </li>
+                    <li class="nav-list-element selected">
+                        <a class="nav-list-link" href={% url 'geography' %}>География</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'skills' %}>Навыки</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link " href={% url 'lastVacancy' %}>Последние вакансии</a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+        <div class="content">
 
+            <div class="data-container">
+                {% for data in context %}
+                <div class="graphs">
+                    <img class="geography-graph-1" src="{{ data.graph_salary_level_by_city.url }}" height="350"/>
+                    <img class="geography-graph-2" src="{{ data.graph_vacancy_fraction_by_city.url }}" height="350"/>
+                </div>
+                <div class="tables">
+                    {{ data.table|safe }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class ='footer-div'>
+    <footer>
+        <h2 class="footer-text">Лапин Константин Юрьевич</h2>
+        <h3 class="footer-text">АТ-01</h3>
+    </footer>
+        </div>
+</main>
 </body>
 </html>

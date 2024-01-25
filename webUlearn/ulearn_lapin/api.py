@@ -25,7 +25,7 @@ class HH_Api:
                 description = ' '.join(re.sub(re.compile('<.*?>'), '', resp['description'])
                                        .strip()
                                        .split())
-                description = description[:100] + '...' if len(description) >= 100 else description
+                description = description[:200] + '...' if len(description) >= 100 else description
                 result_list.append({'name': resp['name'],
                                     'description': description,
                                     'key_skills': ', '.join(map(lambda x: x['name'], resp['key_skills'])),
@@ -36,3 +36,4 @@ class HH_Api:
                                     'alternate_url': resp['alternate_url']})
 
         return result_list
+

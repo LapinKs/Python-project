@@ -9,17 +9,17 @@
 </head>
 <body>
 <main>
-    <header>
-        <div class = 'header-div'>
-            <h1>Специалист техподдержки</h1>
-        </div>
-    </header>
+<header class="main-header">
+                <div class="logo-container">
+                    <img src="{% static 'images/tech-logo.png' %}" width ="400" height="120" class="logo"/>
+                </div>
+            </header>
     <div class="container">
         <div class="navigation">
             <nav class="nav-list-container">
                 <ul>
                     <li class="nav-list-element">
-                        <a class="nav-list-link current" href="/">Главная</a>
+                        <a class="nav-list-link selected" href="/">Главная</a>
                     </li>
                     <li class="nav-list-element">
                         <a class="nav-list-link" href={% url 'relevance' %}>Востребованность</a>
@@ -37,14 +37,10 @@
             </nav>
         </div>
         <div class="content">
-            <header class="main-header">
-                <div class="logo-container">
-                    <img src="{% static 'images/tech-sup.png' %}" width ='90' height = '90' class="logo"/>
-                </div>
-            </header>
+
             <div class="data-container">
                 {% for context in context %}
-                <img class="content-image" src="{{ context.photo.url }}"/>
+                <img class="content-image" src="{{ context.photo.url }}" height="223" />
                 {{ context.content|safe }}
 
                 <div class="empty"></div>
@@ -53,8 +49,8 @@
         </div>
     </div>
             <footer>
-                <p>Лапин Константин Юрьевич</p>
-                <p>АТ-01</p>
+                <h2 class="footer-text">Лапин Константин Юрьевич</h2>
+        <h3 class="footer-text">АТ-01</h3>
             </footer>
 </main>
 </body>
