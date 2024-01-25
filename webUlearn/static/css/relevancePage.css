@@ -69,6 +69,7 @@ footer {
 
 /* Content */
 .content {
+box-shadow:0 0 20px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     background: #9966CC;
@@ -160,6 +161,6 @@ margin-left: auto
     padding: 10px;
 }
  header{justify-content:center;
- box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+
  padding:20px;
  }
